@@ -22,6 +22,17 @@ const initialState = {
 
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case "REMOVE_ADDED_FEATURE":
+        console.log('case remove added feature, state, action', state, action)
+        return {
+            ...state,
+            car: {
+                ...state.car,
+                features: state.car.features.filter((feature)=>feature.id !== action.payload)
+            }
+                // write some .filter to remove the feature with id passed on action.payload
+            
+        }
     default:
       return state;
   }
