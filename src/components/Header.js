@@ -1,5 +1,5 @@
-import React from 'react';
-import { connect } from 'react-redux';
+import React from "react";
+import { connect } from "react-redux";
 
 const Header = props => {
   return (
@@ -18,9 +18,10 @@ const mapStateToProps = state => {
     carName: state.car.name,
     carImage: state.car.image,
     carPrice: state.car.price
-  }
-}
+  };
+};
 
 export default connect(
-  mapStateToProps, {}
+  mapStateToProps,
+  {}// No actions currently on the header
 )(Header);
