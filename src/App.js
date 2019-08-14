@@ -13,9 +13,10 @@ const App = () => {
     // dispatch an action here to remove an item
   // };
 
-  const buyItem = item => {
-    // dispatch an action here to add an item
-  };
+  // see action in additionalFeatureActions. Called by clickHandler in AdditionalFeature.js
+  // const buyItem = item => {
+  //   // dispatch an action here to add an item
+  // };
 
   return (
       <div className="boxes">
@@ -25,7 +26,7 @@ const App = () => {
         </div>
         <div className="box">
           <AdditionalFeatures />
-          {/* <Total car={state.car} additionalPrice={state.additionalPrice} /> */}
+          <Total />
         </div>
       </div>
   );

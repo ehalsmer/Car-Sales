@@ -8,8 +8,6 @@ const initialState = {
     image:
       "https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg",
     features: [
-      { id: 1, name: "V-6 engine", price: 1500 },
-      { id: 3, name: "Premium sound system", price: 500 }
     ]
   },
   store: [
@@ -34,11 +32,13 @@ export const reducer = (state = initialState, action) => {
             
         }
     case "ADD_FEATURE":
+        let newFeature = state.store[action.payload-1]
         return {
             ...state,
+            additionalPrice: state.additionalPrice + newFeature.price,
             car: {
                 ...state.car,
-                features: [...state.car.features, state.store[action.payload-1]]
+                features: [...state.car.features, newFeature]
                 // id of new feature is on payload. 
             }
         }
