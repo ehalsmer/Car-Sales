@@ -24,6 +24,7 @@ export const reducer = (state = initialState, action) => {
         // console.log('case remove added feature, state, action', state, action)
         return {
             ...state,
+            additionalPrice: state.additionalPrice - state.store[action.payload-1].price,
             car: {
                 ...state.car,
                 features: state.car.features.filter((feature)=>feature.id !== action.payload)
