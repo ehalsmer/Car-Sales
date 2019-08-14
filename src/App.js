@@ -23,10 +23,10 @@ const App = () => {
           <Header />
           <AddedFeatures />
         </div>
-        {/* <div className="box">
-          <AdditionalFeatures store={state.store} />
-          <Total car={state.car} additionalPrice={state.additionalPrice} />
-        </div> */}
+        <div className="box">
+          <AdditionalFeatures />
+          {/* <Total car={state.car} additionalPrice={state.additionalPrice} /> */}
+        </div>
       </div>
   );
 };
